@@ -1,611 +1,596 @@
-![](https://github.com/rwaldron/johnny-five/raw/main/assets/sgier-johnny-five.png)
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://github.com/rwaldron/johnny-five/raw/main/assets/sgier-johnny-five.png"><img src="https://github.com/rwaldron/johnny-five/raw/main/assets/sgier-johnny-five.png" alt="" style="max-width: 100%;"></a></p>
+<h1 tabindex="-1" dir="auto"><a id="user-content-johnny-five" class="anchor" aria-hidden="true" tabindex="-1" href="#johnny-five"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">约翰尼五号</font></font></h1>
+<h3 tabindex="-1" dir="auto"><a id="user-content-the-javascript-robotics-programming-framework" class="anchor" aria-hidden="true" tabindex="-1" href="#the-javascript-robotics-programming-framework"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JavaScript 机器人编程框架</font></font></h3>
 
-# Johnny-Five
-### The JavaScript Robotics Programming Framework
+<p dir="auto"><em><font style="vertical-align: inherit;"><a href="http://msgierillustration.com" rel="nofollow"><font style="vertical-align: inherit;">迈克·斯吉尔</font></a><font style="vertical-align: inherit;">的艺术作品</font></font><a href="http://msgierillustration.com" rel="nofollow"><font style="vertical-align: inherit;"></font></a></em></p>
+<p dir="auto"><a href="https://github.com/rwaldron/johnny-five/actions"><img src="https://github.com/rwaldron/johnny-five/actions/workflows/npm-grunt.yml/badge.svg" alt="构建、Lint、测试和测量覆盖率" style="max-width: 100%;"></a>
+<a href="https://ci.appveyor.com/project/rwaldron/johnny-five" rel="nofollow"><img src="https://camo.githubusercontent.com/76a32e58e9048fa0be0a7b7867bb5acafa79bbbc318ebfbe11acb4b96303fe6e/68747470733a2f2f63692e6170707665796f722e636f6d2f6170692f70726f6a656374732f7374617475732f686d6b6537316b3775656d746e616d692f6272616e63682f6d61696e3f7376673d74727565" alt="Appveyor构建状态" data-canonical-src="https://ci.appveyor.com/api/projects/status/hmke71k7uemtnami/branch/main?svg=true" style="max-width: 100%;"></a>
+<a href="https://coveralls.io/github/rwaldron/johnny-five?branch=main" rel="nofollow"><img src="https://camo.githubusercontent.com/845275777647cb354ed56a494d1ccc177968333b8ff33e6030cda344836020bc/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6769746875622f7277616c64726f6e2f6a6f686e6e792d666976652f62616467652e7376673f6272616e63683d6d61696e" alt="覆盖状态" data-canonical-src="https://coveralls.io/repos/github/rwaldron/johnny-five/badge.svg?branch=main" style="max-width: 100%;"></a>
+<a href="https://packagephobia.now.sh/result?p=johnny-five" rel="nofollow"><img src="https://camo.githubusercontent.com/cdd4f32a3cce1958070d3005d7347eb960abb8285531dfc247396c72438a0211/68747470733a2f2f7061636b61676570686f6269612e6e6f772e73682f62616467653f703d6a6f686e6e792d66697665" alt="安装尺寸" data-canonical-src="https://packagephobia.now.sh/badge?p=johnny-five" style="max-width: 100%;"></a>
+<a href="https://gitter.im/rwaldron/johnny-five" rel="nofollow"><img src="https://camo.githubusercontent.com/f8970f04491cf582b0909329aa795e956fd4f4be61bcb6e4f9cfd7fd6d7f9e3b/68747470733a2f2f696d672e736869656c64732e696f2f6769747465722f726f6f6d2f6e776a732f6e772e6a732e737667" alt="吉特" data-canonical-src="https://img.shields.io/gitter/room/nwjs/nw.js.svg" style="max-width: 100%;"></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Johnny-Five 是一个开源、基于 Firmata 协议的物联网和机器人编程框架，由</font></font><a href="https://twitter.com/nodebots" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nodebots</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区开发。</font><font style="vertical-align: inherit;">Johnny-Five 程序可以为 Arduino（所有型号）、Electric Imp、Beagle Bone、Intel Galileo &amp; Edison、Linino One、Pinoccio、pcDuino3、Raspberry Pi、Particle/Spark Core &amp; Photon、Tessel 2、TI Launchpad 等编写！</font></font></strong></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Johnny-Five 已经从一个充满激情的项目发展成为一个激发世界各地不同年龄、背景的人们学习和创造力的工具。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">只是对学习和构建很棒的东西感兴趣吗？</font><font style="vertical-align: inherit;">您可能想从</font></font><a href="http://johnny-five.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">约翰尼五人组官方网站</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开始。</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想查找 API 文档，</font></font><a href="http://johnny-five.io/api/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">就在这里</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">需要弄清楚项目使用什么平台？</font><font style="vertical-align: inherit;">我们把那些东西放在</font></font><a href="http://johnny-five.io/platform-support/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这里</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">需要为您的下一个 NodeBot 提供灵感吗？</font><font style="vertical-align: inherit;">查看</font></font><a href="http://johnny-five.io/examples/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">想要了解社区项目的最新动态吗？</font></font><a href="http://johnny-five.io/articles/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">看一下这个</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">需要 NodeBots 社区或 Johnny-Five 项目更新和公告？</font></font><a href="http://johnny-five.io/news/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">就是您要找的。</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Johnny-Five 并不试图提供“所有的东西”，而是专注于提供健壮的、经过实际测试的、高度可组合的 API，这些 API 在所有支持的硬件平台上表现一致。</font><font style="vertical-align: inherit;">Johnny-Five 希望成为硬件项目的基准控制套件，让您可以自由地构建、扩展和试验自己选择的各种 JavaScript 库。</font><font style="vertical-align: inherit;">约翰尼五人组舒适地与：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">流行的应用程序库，例如</font></font><a href="http://expressjs.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Express.js</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="http://socket.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Socket.io</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他硬件项目，如</font></font><a href="https://github.com/felixge/node-ar-drone"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ar-drone</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://github.com/ceejbot/aerogel"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Airgel</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="https://github.com/alchemycs/spheron"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spheron</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">蓝牙游戏控制器，例如</font></font><a href="https://github.com/andrew/node-xbox-controller"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Xbox Controller</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="https://github.com/rdepena/node-dualshock-controller"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DualShock</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">物联网框架，例如</font></font><a href="http://www.octoblu.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Octoblu</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">......这只是众多可探索的可能性中的一小部分。</font><font style="vertical-align: inherit;">查看这些令人兴奋的项目：</font></font><a href="https://www.npmjs.org/package/node-pulsesensor" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">node-pulsesensor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/footballbot-workshop-ui" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">footballbot-workshop-ui</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/nodebotui" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">nodebotui</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/dublin-disco" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dublin-disco</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/node-slot-car-bot" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">node-slot-car-bot</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/servo-calibrator" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">servo-calibrator</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/node-ardx" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">node-ardx</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/nodebot-workshop" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">nodebot-workshop</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/phone-home" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone-home</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/purple-unicorn" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">purple-unicorn</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/webduino" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">webduino</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/leapduino" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leapduino</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/lasercat-workshop" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">lasercat-workshop</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/simplesense" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simplesense</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/five-redbot" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">五-redbot</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/robotnik" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">robotnik</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://www.npmjs.org/package/the-blender" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the-blender</font></font></a></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为什么选择 JavaScript？</font></font></strong>
+<a href="http://www.voodootikigod.com/nodebots-the-rise-of-js-robotics" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NodeBots：JavaScript 机器人的兴起</font></font></a></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-hello-johnny" class="anchor" aria-hidden="true" tabindex="-1" href="#hello-johnny"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">你好约翰尼</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微控制器和SoC世界中无处不在的“Hello World”程序是“闪烁LED”。</font><font style="vertical-align: inherit;">以下代码演示了如何使用 Johnny-Five 框架来完成此操作。</font></font></p>
+<div class="highlight highlight-source-js notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">const</span> <span class="pl-kos">{</span> Board<span class="pl-kos">,</span> Led <span class="pl-kos">}</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">"johnny-five"</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-k">const</span> <span class="pl-s1">board</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Board</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 
-<!-- 
-
-    Hello!
-
-    Please don't edit this file!
-
-    If you'd like to make changes to the readme contents, please make them in the tpl/.readme.md file. If you'd like to add an example: 
-
-    1. Add the file in `eg/`
-    2. Add a breadboard image in `docs/breadboards`
-    3. Add an entry to `tpl/programs.json`. 
-    4. Generated the markdown with: `grunt examples`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--->
-
-
-_Artwork by [Mike Sgier](http://msgierillustration.com)_
-
-[![Build, Lint, Test and Measure Coverage](https://github.com/rwaldron/johnny-five/actions/workflows/npm-grunt.yml/badge.svg)](https://github.com/rwaldron/johnny-five/actions)
-[![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/hmke71k7uemtnami/branch/main?svg=true)](https://ci.appveyor.com/project/rwaldron/johnny-five)
-[![Coverage Status](https://coveralls.io/repos/github/rwaldron/johnny-five/badge.svg?branch=main)](https://coveralls.io/github/rwaldron/johnny-five?branch=main)
-[![Install Size](https://packagephobia.now.sh/badge?p=johnny-five)](https://packagephobia.now.sh/result?p=johnny-five)
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/rwaldron/johnny-five)
-
-
-
-**Johnny-Five is an Open Source, Firmata Protocol based, IoT and Robotics programming framework, developed by the [Nodebots](https://twitter.com/nodebots) Community. Johnny-Five programs can be written for Arduino (all models), Electric Imp, Beagle Bone, Intel Galileo & Edison, Linino One, Pinoccio, pcDuino3, Raspberry Pi, Particle/Spark Core & Photon, Tessel 2, TI Launchpad and more!**
-
-Johnny-Five has grown from a passion project into a tool for inspiring learning and creativity for people of all ages, backgrounds, and from all across the world.
-
-Just interested in learning and building awesome things? You might want to start with the official [Johnny-Five website](http://johnny-five.io).
-
-* If you want to find the API documentation, [that’s right here](http://johnny-five.io/api/).
-* Need to figure out what platform to use for a project? We put that stuff [here](http://johnny-five.io/platform-support/).
-* Need inspiration for your next NodeBot? Check out the [examples](http://johnny-five.io/examples/).
-* Want to stay up-to-date with projects in the community? [Check this out](http://johnny-five.io/articles/).
-* Need NodeBots community or Johnny-Five project updates and announcements? [This](http://johnny-five.io/news/) is what you’re looking for.
-
-
-Johnny-Five does not attempt to provide "all the things", but instead focuses on delivering robust, reality tested, highly composable APIs that behave consistently across all supported hardware platforms. Johnny-Five wants to be a baseline control kit for hardware projects, allowing you the freedom to build, grow and experiment with diverse JavaScript libraries of your own choice. Johnny-Five couples comfortably with:
-
-- Popular application libraries such as [Express.js](http://expressjs.com/) and [Socket.io](http://socket.io/).
-- Fellow hardware projects like [ar-drone](https://github.com/felixge/node-ar-drone), [Aerogel](https://github.com/ceejbot/aerogel) and [Spheron](https://github.com/alchemycs/spheron)
-- Bluetooth game controllers like [XBox Controller](https://github.com/andrew/node-xbox-controller) and [DualShock](https://github.com/rdepena/node-dualshock-controller)
-- IoT frameworks, such as [Octoblu](http://www.octoblu.com/)
-
-...And that's only a few of the many explorable possibilities. Check out these exciting projects: [node-pulsesensor](https://www.npmjs.org/package/node-pulsesensor), [footballbot-workshop-ui](https://www.npmjs.org/package/footballbot-workshop-ui), [nodebotui](https://www.npmjs.org/package/nodebotui), [dublin-disco](https://www.npmjs.org/package/dublin-disco), [node-slot-car-bot](https://www.npmjs.org/package/node-slot-car-bot), [servo-calibrator](https://www.npmjs.org/package/servo-calibrator), [node-ardx](https://www.npmjs.org/package/node-ardx), [nodebot-workshop](https://www.npmjs.org/package/nodebot-workshop), [phone-home](https://www.npmjs.org/package/phone-home), [purple-unicorn](https://www.npmjs.org/package/purple-unicorn), [webduino](https://www.npmjs.org/package/webduino), [leapduino](https://www.npmjs.org/package/leapduino), [lasercat-workshop](https://www.npmjs.org/package/lasercat-workshop), [simplesense](https://www.npmjs.org/package/simplesense), [five-redbot](https://www.npmjs.org/package/five-redbot), [robotnik](https://www.npmjs.org/package/robotnik), [the-blender](https://www.npmjs.org/package/the-blender)
-
-
-**Why JavaScript?**
-[NodeBots: The Rise of JavaScript Robotics](http://www.voodootikigod.com/nodebots-the-rise-of-js-robotics)
-
-## Hello Johnny
-
-The ubiquitous "Hello World" program of the microcontroller and SoC world is "blink an LED". The following code demonstrates how this is done using the Johnny-Five framework.
-
-```javascript
-const { Board, Led } = require("johnny-five");
+<span class="pl-s1">board</span><span class="pl-kos">.</span><span class="pl-en">on</span><span class="pl-kos">(</span><span class="pl-s">"ready"</span><span class="pl-kos">,</span> <span class="pl-kos">(</span><span class="pl-kos">)</span> <span class="pl-c1">=&gt;</span> <span class="pl-kos">{</span>
+  <span class="pl-c">// Create an Led on pin 13</span>
+  <span class="pl-k">const</span> <span class="pl-s1">led</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-v">Led</span><span class="pl-kos">(</span><span class="pl-c1">13</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+  <span class="pl-c">// Blink every half second</span>
+  <span class="pl-s1">led</span><span class="pl-kos">.</span><span class="pl-en">blink</span><span class="pl-kos">(</span><span class="pl-c1">500</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="const { Board, Led } = require(&quot;johnny-five&quot;);
 const board = new Board();
 
-board.on("ready", () => {
+board.on(&quot;ready&quot;, () => {
   // Create an Led on pin 13
   const led = new Led(13);
   // Blink every half second
   led.blink(500);
-});
-```
-
-<img src="https://github.com/rwaldron/johnny-five/raw/main/assets/led-blink.gif">
-
-> Note: Node will crash if you try to run johnny-five in the node REPL, but board instances will create their own contextual REPL. Put your script in a file.
-
-
-## Supported Hardware
-
-Johnny-Five has been tested on a variety of Arduino-compatible [Boards](https://github.com/rwaldron/johnny-five/wiki/Board).
-
-For non-Arduino based projects, a number of platform-specific [IO Plugins](https://github.com/rwaldron/johnny-five/wiki/IO-Plugins) are available. IO Plugins allow Johnny-Five code to communicate with any non-Arduino based hardware in whatever language that platforms speaks!
-
-## Documentation
-
-Documentation for the Johnny-Five API can be found [here](http://johnny-five.io/api/) and [example programs here](http://johnny-five.io/examples/).
-
-## Guidance
-
-Need help? Ask a question on the [NodeBots Community Forum](http://forums.nodebots.io). If you just have a quick question or are interested in ongoing design discussions, join us in the [Johnny-Five Gitter Chat](https://gitter.im/rwaldron/johnny-five).
-
-For step-by-step examples, including an electronics primer, check out [Arduino Experimenter's Guide for NodeJS](http://node-ardx.org/) by [@AnnaGerber](https://twitter.com/AnnaGerber)
-
-Here is a list of [prerequisites](https://github.com/rwaldron/johnny-five/wiki/Getting-Started#prerequisites) for Linux, OSX or Windows.
-
-Check out the [bluetooth guide](https://github.com/rwaldron/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes) if you want to remotely control your robot.
-
-## Setup and Assemble Arduino
-
-- Recommended Starting Kit: [Sparkfun Inventor's Kit](https://www.sparkfun.com/products/12001)
-- Download [Arduino IDE](http://arduino.cc/en/main/software)
-- Plug in your Arduino or Arduino compatible microcontroller via USB
-- Open the Arduino IDE, select: File > Examples > Firmata > StandardFirmataPlus
-    + StandardFirmataPlus is available in Firmata v2.5.0 or greater
-- Click the "Upload" button.
-
-If the upload was successful, the board is now prepared and you can close the Arduino IDE.
-
-For non-Arduino projects, each IO Plugin's repo will provide its own platform specific setup instructions.
-
-
-## Hey you, here's Johnny!
-
-#### Source Code:
-
-``` bash
-git clone git://github.com/rwaldron/johnny-five.git && cd johnny-five
-
-npm install
-```
-
-#### npm package:
-
-Install the module with:
-
-```bash
-npm install johnny-five
-```
-
-
-## Example Programs
-
-To get you up and running quickly, we provide a variety of examples for using each Johnny-Five component. One thing we’re especially excited about is the extensive collection of [Fritzing](http://fritzing.org/home/) diagrams you’ll find throughout the site. A huge part of doing any Johnny-Five project is handling the actual hardware, and we’ve included these as part of the documentation because we realised that instructions on how to write code to control a servo are insufficient without instructions on how to connect a servo!
-
-To interactively navigate the examples, visit the [Johnny-Five examples](http://johnny-five.io/examples/) page on the official website. If you want to link directly to the examples in this repo, you can use one of the following links.
-
-**There are presently 362 example programs with code and diagrams!**
-
-<!--extract-start:examples-->
-
-### Board
-- [Board - Basic Initialization](https://github.com/rwaldron/johnny-five/blob/main/docs/board.md)
-- [Board - Cleanup in 'exit' event](https://github.com/rwaldron/johnny-five/blob/main/docs/board-cleanup.md)
-- [Board - Multiple in one program](https://github.com/rwaldron/johnny-five/blob/main/docs/board-multi.md)
-- [Board - Specify Sampling Interval](https://github.com/rwaldron/johnny-five/blob/main/docs/board-sampling-interval.md)
-- [Board - Specify port](https://github.com/rwaldron/johnny-five/blob/main/docs/board-with-port.md)
-- [Custom Data Properties](https://github.com/rwaldron/johnny-five/blob/main/docs/custom-properties.md)
-- [Pin](https://github.com/rwaldron/johnny-five/blob/main/docs/pin.md)
-- [REPL](https://github.com/rwaldron/johnny-five/blob/main/docs/repl.md)
-
-### LED
-- [LED](https://github.com/rwaldron/johnny-five/blob/main/docs/led.md)
-- [LED - Blink](https://github.com/rwaldron/johnny-five/blob/main/docs/led-blink.md)
-- [LED - Demo sequence](https://github.com/rwaldron/johnny-five/blob/main/docs/led-demo-sequence.md)
-- [LED - Fade](https://github.com/rwaldron/johnny-five/blob/main/docs/led-fade.md)
-- [LED - Fade callback](https://github.com/rwaldron/johnny-five/blob/main/docs/led-fade-callback.md)
-- [LED - Fade with animation](https://github.com/rwaldron/johnny-five/blob/main/docs/led-fade-animation.md)
-- [LED - PCA9685](https://github.com/rwaldron/johnny-five/blob/main/docs/led-PCA9685.md)
-- [LED - Pulse](https://github.com/rwaldron/johnny-five/blob/main/docs/led-pulse.md)
-- [LED - Pulse with animation](https://github.com/rwaldron/johnny-five/blob/main/docs/led-pulse-animation.md)
-- [LED - Slider](https://github.com/rwaldron/johnny-five/blob/main/docs/led-slider.md)
-- [LED - Tessel Servo Module](https://github.com/rwaldron/johnny-five/blob/main/docs/led-tessel-servo-module.md)
-- [LEDs - An array of LEDs](https://github.com/rwaldron/johnny-five/blob/main/docs/led-array.md)
-- [LEDs - Controlling an array of LEDs](https://github.com/rwaldron/johnny-five/blob/main/docs/led-array-controller.md)
-
-### LED: RGB
-- [LED - RGB (Common Anode)](https://github.com/rwaldron/johnny-five/blob/main/docs/led-rgb-anode.md)
-- [LED - RGB (Common Anode) PCA9685](https://github.com/rwaldron/johnny-five/blob/main/docs/led-rgb-anode-PCA9685.md)
-- [LED - RGB Intensity](https://github.com/rwaldron/johnny-five/blob/main/docs/led-rgb-intensity.md)
-- [LED - Rainbow](https://github.com/rwaldron/johnny-five/blob/main/docs/led-rainbow.md)
-- [LED - Rainbow BlinkM](https://github.com/rwaldron/johnny-five/blob/main/docs/led-rgb-BLINKM.md)
-
-### LED: Digits & Matrix
-- [LED - Digital Clock](https://github.com/rwaldron/johnny-five/blob/main/docs/led-digits-clock.md)
-- [LED - Digital Clock, Dual Displays](https://github.com/rwaldron/johnny-five/blob/main/docs/led-digits-clock-dual.md)
-- [LED - Digital Clock, HT16K33](https://github.com/rwaldron/johnny-five/blob/main/docs/led-digits-clock-HT16K33.md)
-- [LED - Draw Matrix Characters Demo](https://github.com/rwaldron/johnny-five/blob/main/docs/led-chars-demo.md)
-- [LED - Enumerate Matrix Characters & Symbols](https://github.com/rwaldron/johnny-five/blob/main/docs/led-enumeratechars.md)
-- [LED - Matrix](https://github.com/rwaldron/johnny-five/blob/main/docs/led-matrix.md)
-- [LED - Matrix Demo](https://github.com/rwaldron/johnny-five/blob/main/docs/led-matrix-tutorial.md)
-- [LED - Matrix HT16K33](https://github.com/rwaldron/johnny-five/blob/main/docs/led-matrix-HT16K33.md)
-- [LED - Matrix HT16K33 16x8](https://github.com/rwaldron/johnny-five/blob/main/docs/led-matrix-HT16K33-16x8.md)
-
-### Servo
-- [Servo](https://github.com/rwaldron/johnny-five/blob/main/docs/servo.md)
-- [Servo - Continuous](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-continuous.md)
-- [Servo - Drive](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-drive.md)
-- [Servo - Multi-Turn](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-multi-turn.md)
-- [Servo - PCA9685](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-PCA9685.md)
-- [Servo - Prompt](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-prompt.md)
-- [Servo - Slider control](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-slider.md)
-- [Servo - Tessel Servo Module](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-tessel-servo-module.md)
-- [Servos - An array of servos](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-array.md)
-
-### GPS
-- [GPS - Adafruit Ultimate GPS Breakout](https://github.com/rwaldron/johnny-five/blob/main/docs/gps-adafruit.md)
-- [GPS - Default GPS](https://github.com/rwaldron/johnny-five/blob/main/docs/gps.md)
-- [GPS - Hardware Serial](https://github.com/rwaldron/johnny-five/blob/main/docs/gps-hardware-serial.md)
-- [GPS - Sparkfun GP-20U7](https://github.com/rwaldron/johnny-five/blob/main/docs/gps-GP-20U7.md)
-
-### Servo Animation
-- [Servo - Animation](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-animation.md)
-- [Servo - Leg Animation](https://github.com/rwaldron/johnny-five/blob/main/docs/servo-animation-leg.md)
-
-### Color
-- [Color - EVShield EV3 (Code)](https://github.com/rwaldron/johnny-five/blob/main/docs/color-EVS_EV3.md)
-- [Color - EVShield EV3 (Raw)](https://github.com/rwaldron/johnny-five/blob/main/docs/color-raw-EVS_EV3.md)
-- [Color - EVShield NXT (Code)](https://github.com/rwaldron/johnny-five/blob/main/docs/color-EVS_NXT.md)
-- [Color - ISL29125](https://github.com/rwaldron/johnny-five/blob/main/docs/color-ISL29125.md)
-
-### Motor
-- [Motor](https://github.com/rwaldron/johnny-five/blob/main/docs/motor.md)
-- [Motor - 3 pin](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-3-pin.md)
-- [Motor - Adafruit DRV8871 DC Motor Driver Breakout](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-drv8871.md)
-- [Motor - Brake](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-brake.md)
-- [Motor - Current](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-current.md)
-- [Motor - Directional](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-directional.md)
-- [Motor - EVShield EV3](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-EVS_EV3.md)
-- [Motor - EVShield NXT](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-EVS_NXT.md)
-- [Motor - Enable Pin](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-enable.md)
-- [Motor - GROVE_I2C_MOTOR_DRIVER](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-GROVE_I2C.md)
-- [Motor - H-Bridge](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-hbridge.md)
-- [Motor - LUDUS](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-LUDUS.md)
-- [Motor - PCA9685](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-PCA9685.md)
-- [Motor - Pololu VNH5019 Dual Motor Driver Breakout](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-vnh5019.md)
-- [Motor - Sparkfun Dual H-bridge Edison Block](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-sparkfun-edison-hbridge.md)
-- [Motor - Sparkfun TB6612FNG](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-TB6612FNG.md)
-- [Motor - l298 Breakout](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-l298-breakout.md)
-- [Motors - Dual H-Bridge](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-hbridge-dual.md)
-
-### Stepper Motor
-- [Stepper - Driver](https://github.com/rwaldron/johnny-five/blob/main/docs/stepper-driver.md)
-- [Stepper - Four Wire](https://github.com/rwaldron/johnny-five/blob/main/docs/stepper-four_wire.md)
-- [Stepper - Sweep](https://github.com/rwaldron/johnny-five/blob/main/docs/stepper-sweep.md)
-
-### ESC & Brushless Motor
-- [ESC - Bidirectional](https://github.com/rwaldron/johnny-five/blob/main/docs/esc-bidirectional.md)
-- [ESC - Keypress controlled ESCs](https://github.com/rwaldron/johnny-five/blob/main/docs/esc-keypress.md)
-- [ESC - PCA9685](https://github.com/rwaldron/johnny-five/blob/main/docs/esc-PCA9685.md)
-
-### Button / Switch
-- [Button](https://github.com/rwaldron/johnny-five/blob/main/docs/button.md)
-- [Button - Bumper](https://github.com/rwaldron/johnny-five/blob/main/docs/button-bumper.md)
-- [Button - EVShield EV3](https://github.com/rwaldron/johnny-five/blob/main/docs/button-EVS_EV3.md)
-- [Button - EVShield NXT](https://github.com/rwaldron/johnny-five/blob/main/docs/button-EVS_NXT.md)
-- [Button - Options](https://github.com/rwaldron/johnny-five/blob/main/docs/button-options.md)
-- [Button - Pullup](https://github.com/rwaldron/johnny-five/blob/main/docs/button-pullup.md)
-- [Buttons - Collection w/ AT42QT1070](https://github.com/rwaldron/johnny-five/blob/main/docs/button-collection-AT42QT1070.md)
-- [Switch](https://github.com/rwaldron/johnny-five/blob/main/docs/switch.md)
-- [Switch - Magnetic Door](https://github.com/rwaldron/johnny-five/blob/main/docs/switch-magnetic-door.md)
-- [Switch - Tilt SW-200D](https://github.com/rwaldron/johnny-five/blob/main/docs/switch-tilt-SW_200D.md)
-- [Toggle Switch](https://github.com/rwaldron/johnny-five/blob/main/docs/toggle-switch.md)
-
-### Keypad
-- [Keypad - 3x4 I2C Nano Backpack](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-3X4_I2C_NANO_BACKPACK.md)
-- [Keypad - 4x4 I2C Nano Backpack](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-4X4_I2C_NANO_BACKPACK.md)
-- [Keypad - VKEY](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-analog-vkey.md)
-- [Keypad - Waveshare AD](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-analog-ad.md)
-- [Touchpad - Grove QTouch](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-QTOUCH.md)
-- [Touchpad - MPR121](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121.md)
-- [Touchpad - MPR121, Sensitivity](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121-sensitivity.md)
-- [Touchpad - MPR121QR2_SHIELD](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121QR2_SHIELD.md)
-- [Touchpad - MPR121_KEYPAD](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121_KEYPAD.md)
-- [Touchpad - MPR121_SHIELD](https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121_SHIELD.md)
-
-### Relay
-- [Relay](https://github.com/rwaldron/johnny-five/blob/main/docs/relay.md)
-- [Relay - Collection](https://github.com/rwaldron/johnny-five/blob/main/docs/relay-collection.md)
-- [Relay On Analog Pin](https://github.com/rwaldron/johnny-five/blob/main/docs/relay-on-analog-pin.md)
-
-### Shift Register
-- [Shift Register](https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register.md)
-- [Shift Register - Common Anode Seven Segment controller](https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register-seven-segment-anode.md)
-- [Shift Register - Common Anode Seven segments, Chained](https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register-daisy-chain-anode.md)
-- [Shift Register - Seven Segment controller](https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register-seven-segment.md)
-- [Shift Register - Seven segments, Chained](https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register-daisy-chain.md)
-
-### Infrared Reflectance
-- [IR Motion](https://github.com/rwaldron/johnny-five/blob/main/docs/ir-motion.md)
-- [IR Proximity](https://github.com/rwaldron/johnny-five/blob/main/docs/ir-proximity.md)
-- [IR Reflectance](https://github.com/rwaldron/johnny-five/blob/main/docs/ir-reflect.md)
-- [IR Reflectance Array](https://github.com/rwaldron/johnny-five/blob/main/docs/ir-reflect-array.md)
-
-### Proximity
-- [Proximity](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity.md)
-- [Proximity - EVShield EV3 (IR)](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_IR.md)
-- [Proximity - EVShield EV3 (IR)](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_IR-alert.md)
-- [Proximity - EVShield EV3 (Ultrasonic)](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_US.md)
-- [Proximity - EVShield EV3 (Ultrasonic)](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_US-alert.md)
-- [Proximity - GP2Y0A710K0F](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-GP2Y0A710K0F.md)
-- [Proximity - HC-SR04](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-hcsr04.md)
-- [Proximity - HC-SR04 (Analog)](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-hcsr04-analog.md)
-- [Proximity - HC-SR04 I2C Backpack](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-hcsr04-i2c.md)
-- [Proximity - LIDAR-Lite](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-lidarlite.md)
-- [Proximity - MB1000](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-mb1000.md)
-- [Proximity - MB1003](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-mb1003.md)
-- [Proximity - MB1010](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-mb1010.md)
-- [Proximity - MB1230](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-mb1230.md)
-- [Proximity - SRF10](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-srf10.md)
-
-### Motion
-- [Motion](https://github.com/rwaldron/johnny-five/blob/main/docs/motion.md)
-- [Motion - GP2Y0A60SZLF](https://github.com/rwaldron/johnny-five/blob/main/docs/motion-GP2Y0A60SZLF.md)
-- [Motion - GP2Y0D805Z0F](https://github.com/rwaldron/johnny-five/blob/main/docs/motion-gp2y0d805z0f.md)
-- [Motion - GP2Y0D810Z0F](https://github.com/rwaldron/johnny-five/blob/main/docs/motion-gp2y0d810z0f.md)
-- [Motion - GP2Y0D810Z0F](https://github.com/rwaldron/johnny-five/blob/main/docs/motion-gp2y0d815z0f.md)
-
-### Joystick
-- [Joystick](https://github.com/rwaldron/johnny-five/blob/main/docs/joystick.md)
-- [Joystick - Esplora](https://github.com/rwaldron/johnny-five/blob/main/docs/joystick-esplora.md)
-- [Joystick - Pan + Tilt control](https://github.com/rwaldron/johnny-five/blob/main/docs/joystick-pantilt.md)
-- [Joystick - Sparkfun Shield](https://github.com/rwaldron/johnny-five/blob/main/docs/joystick-shield.md)
-
-### LCD
-- [Grove - RGB LCD Color Previewer](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-rgb-bgcolor-previewer.md)
-- [LCD](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd.md)
-- [LCD - Enumerate characters](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-enumeratechars.md)
-- [LCD - I2C](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-i2c.md)
-- [LCD - I2C PCF8574](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-i2c-PCF8574.md)
-- [LCD - I2C Runner](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-i2c-runner.md)
-- [LCD - Runner 16x2](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-runner.md)
-- [LCD - Runner 20x4](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-runner-20x4.md)
-- [LCD - Tessel 2 16x2](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-16x2-tessel.md)
-- [Tessel 2 + Grove - RGB LCD Color Previewer](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-rgb-bgcolor-previewer-tessel.md)
-- [Tessel 2 + Grove - RGB LCD Display](https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-rgb-tessel-grove-JHD1313M1.md)
-
-### Compass/Magnetometer
-- [Compass - Find north](https://github.com/rwaldron/johnny-five/blob/main/docs/magnetometer-north.md)
-- [Compass - HMC5883L](https://github.com/rwaldron/johnny-five/blob/main/docs/compass-hmc5883l.md)
-- [Compass - HMC6352](https://github.com/rwaldron/johnny-five/blob/main/docs/compass-hmc6352.md)
-- [Compass - Logger](https://github.com/rwaldron/johnny-five/blob/main/docs/magnetometer-log.md)
-- [Compass - MAG3110](https://github.com/rwaldron/johnny-five/blob/main/docs/compass-MAG3110.md)
-- [Compass - MAG3110 on Tessel 2](https://github.com/rwaldron/johnny-five/blob/main/docs/compass-MAG3110-tessel.md)
-- [Compass / Magnetometer](https://github.com/rwaldron/johnny-five/blob/main/docs/magnetometer.md)
-
-### Piezo
-- [Piezo](https://github.com/rwaldron/johnny-five/blob/main/docs/piezo.md)
-
-### IMU/Multi
-- [IMU - BNO055](https://github.com/rwaldron/johnny-five/blob/main/docs/imu-bno055.md)
-- [IMU - BNO055 (Orientation)](https://github.com/rwaldron/johnny-five/blob/main/docs/imu-bno055-orientation.md)
-- [IMU - LSM303C](https://github.com/rwaldron/johnny-five/blob/main/docs/imu-lsm303c.md)
-- [IMU - MPU6050](https://github.com/rwaldron/johnny-five/blob/main/docs/imu-mpu6050.md)
-- [Multi - BME280](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-BME280.md)
-- [Multi - BMP085](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-bmp085.md)
-- [Multi - BMP180](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-bmp180.md)
-- [Multi - DHT11_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-DHT11_I2C_NANO_BACKPACK.md)
-- [Multi - DHT21_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-DHT21_I2C_NANO_BACKPACK.md)
-- [Multi - DHT22_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-DHT22_I2C_NANO_BACKPACK.md)
-- [Multi - HIH6130](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-HIH6130.md)
-- [Multi - HTU21D](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-htu21d.md)
-- [Multi - MPL115A2](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-mpl115a2.md)
-- [Multi - MPL3115A2](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-mpl3115a2.md)
-- [Multi - MS5611](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-MS5611.md)
-- [Multi - SHT31D](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-sht31d.md)
-- [Multi - SI7020](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-SI7020.md)
-- [Multi - SI7021](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-SI7021.md)
-- [Multi - TH02](https://github.com/rwaldron/johnny-five/blob/main/docs/multi-TH02.md)
-
-### Sensors
-- [Accelerometer](https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer.md)
-- [Accelerometer - ADXL335](https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-adxl335.md)
-- [Accelerometer - ADXL345](https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-adxl345.md)
-- [Accelerometer - LIS3DH](https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-LIS3DH.md)
-- [Accelerometer - MMA7361](https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-mma7361.md)
-- [Accelerometer - MMA8452](https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-MMA8452.md)
-- [Accelerometer - MPU6050](https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-mpu6050.md)
-- [Accelerometer - Pan + Tilt](https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-pan-tilt.md)
-- [Altimeter - BMP085](https://github.com/rwaldron/johnny-five/blob/main/docs/altimeter-BMP085.md)
-- [Altimeter - BMP180](https://github.com/rwaldron/johnny-five/blob/main/docs/altimeter-BMP180.md)
-- [Altimeter - MPL3115A2](https://github.com/rwaldron/johnny-five/blob/main/docs/altimeter-mpl3115a2.md)
-- [Altimeter - MS5611](https://github.com/rwaldron/johnny-five/blob/main/docs/altimeter-MS5611.md)
-- [Barometer - BMP085](https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-BMP085.md)
-- [Barometer - BMP180](https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-BMP180.md)
-- [Barometer - MPL115A2](https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-mpl115a2.md)
-- [Barometer - MPL3115A2](https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-mpl3115a2.md)
-- [Barometer - MS5611](https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-MS5611.md)
-- [Gyro](https://github.com/rwaldron/johnny-five/blob/main/docs/gyro.md)
-- [Gyro - Analog LPR5150AL](https://github.com/rwaldron/johnny-five/blob/main/docs/gyro-lpr5150l.md)
-- [Gyro - I2C MPU6050](https://github.com/rwaldron/johnny-five/blob/main/docs/gyro-mpu6050.md)
-- [Hygrometer - DHT11_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-DHT11_I2C_NANO_BACKPACK.md)
-- [Hygrometer - DHT21_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-DHT21_I2C_NANO_BACKPACK.md)
-- [Hygrometer - DHT22_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-DHT22_I2C_NANO_BACKPACK.md)
-- [Hygrometer - HIH6130](https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-HIH6130.md)
-- [Hygrometer - HTU21D](https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-htu21d.md)
-- [Hygrometer - SHT31D](https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-sht31d.md)
-- [Hygrometer - SI7021](https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-SI7021.md)
-- [Hygrometer - TH02](https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-TH02.md)
-- [Sensor](https://github.com/rwaldron/johnny-five/blob/main/docs/sensor.md)
-- [Sensor - Digital Microwave](https://github.com/rwaldron/johnny-five/blob/main/docs/sensor-digital-microwave.md)
-- [Sensor - Flex sensor](https://github.com/rwaldron/johnny-five/blob/main/docs/flex.md)
-- [Sensor - Force sensitive resistor](https://github.com/rwaldron/johnny-five/blob/main/docs/sensor-fsr.md)
-- [Sensor - Microphone](https://github.com/rwaldron/johnny-five/blob/main/docs/microphone.md)
-- [Sensor - Photoresistor](https://github.com/rwaldron/johnny-five/blob/main/docs/photoresistor.md)
-- [Sensor - Potentiometer](https://github.com/rwaldron/johnny-five/blob/main/docs/potentiometer.md)
-- [Sensor - Slide potentiometer](https://github.com/rwaldron/johnny-five/blob/main/docs/sensor-slider.md)
-- [Thermometer - BMP085](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-bmp085.md)
-- [Thermometer - BMP180](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-BMP180.md)
-- [Thermometer - DHT11_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-DHT11_I2C_NANO_BACKPACK.md)
-- [Thermometer - DHT21_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-DHT21_I2C_NANO_BACKPACK.md)
-- [Thermometer - DHT22_I2C_NANO_BACKPACK](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-DHT22_I2C_NANO_BACKPACK.md)
-- [Thermometer - DS18B20](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-ds18b20.md)
-- [Thermometer - Dual DS18B20](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-dual-ds18b20.md)
-- [Thermometer - HIH6130](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-HIH6130.md)
-- [Thermometer - HTU21D](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-htu21d.md)
-- [Thermometer - LM335](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-lm335.md)
-- [Thermometer - LM35](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-lm35.md)
-- [Thermometer - MAX31850](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-max31850k.md)
-- [Thermometer - MCP9808](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-MCP9808.md)
-- [Thermometer - MPL115A2](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-mpl115a2.md)
-- [Thermometer - MPL3115A2](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-mpl3115a2.md)
-- [Thermometer - MPU6050](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-mpu6050.md)
-- [Thermometer - MS5611](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-MS5611.md)
-- [Thermometer - SHT31D](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-sht31d.md)
-- [Thermometer - SI7020](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-SI7020.md)
-- [Thermometer - SI7021](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-SI7021.md)
-- [Thermometer - TH02](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-TH02.md)
-- [Thermometer - TMP102](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-tmp102.md)
-- [Thermometer - TMP36](https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-tmp36.md)
-
-### Expander
-- [Expander - 74HC595](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-74HC595.md)
-- [Expander - CD74HC4067, 16 Channel Analog Input Breakout](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-CD74HC4067_NANO_BACKPACK.md)
-- [Expander - LIS3DH](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-LIS3DH.md)
-- [Expander - MCP23008](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-MCP23008.md)
-- [Expander - MCP23017](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-MCP23017.md)
-- [Expander - MUXSHIELD2, Analog Sensors](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-MUXSHIELD2-analog-read.md)
-- [Expander - MUXSHIELD2, Digital Input and Output](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-MUXSHIELD2-mixed.md)
-- [Expander - PCA9685](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-PCA9685.md)
-- [Expander - PCF8574](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-PCF8574.md)
-- [Expander - PCF8575](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-PCF8575.md)
-- [Expander - PCF8591](https://github.com/rwaldron/johnny-five/blob/main/docs/expander-PCF8591.md)
-
-### Photon Weather Shield
-- [Photon Weather Shield: Moisture](https://github.com/rwaldron/johnny-five/blob/main/docs/sensor-photon-weather-shield-moisture.md)
-
-### Lego EVShield
-- [Button - EVShield EV3](https://github.com/rwaldron/johnny-five/blob/main/docs/button-EVS_EV3.md)
-- [Button - EVShield NXT](https://github.com/rwaldron/johnny-five/blob/main/docs/button-EVS_NXT.md)
-- [Color - EVShield EV3 (Code)](https://github.com/rwaldron/johnny-five/blob/main/docs/color-EVS_EV3.md)
-- [Color - EVShield EV3 (Raw)](https://github.com/rwaldron/johnny-five/blob/main/docs/color-raw-EVS_EV3.md)
-- [Color - EVShield NXT (Code)](https://github.com/rwaldron/johnny-five/blob/main/docs/color-EVS_NXT.md)
-- [Light - BH1750](https://github.com/rwaldron/johnny-five/blob/main/docs/light-ambient-BH1750.md)
-- [Light - EVShield EV3 (Ambient)](https://github.com/rwaldron/johnny-five/blob/main/docs/light-ambient-EVS_EV3.md)
-- [Light - EVShield EV3 (Reflected)](https://github.com/rwaldron/johnny-five/blob/main/docs/light-reflected-EVS_EV3.md)
-- [Light - EVShield NXT (Ambient)](https://github.com/rwaldron/johnny-five/blob/main/docs/light-ambient-EVS_NXT.md)
-- [Light - EVShield NXT (Reflected)](https://github.com/rwaldron/johnny-five/blob/main/docs/light-reflected-EVS_NXT.md)
-- [Light - TSL2561](https://github.com/rwaldron/johnny-five/blob/main/docs/light-ambient-TSL2561.md)
-- [Motor - EVShield EV3](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-EVS_EV3.md)
-- [Motor - EVShield NXT](https://github.com/rwaldron/johnny-five/blob/main/docs/motor-EVS_NXT.md)
-- [Proximity - EVShield EV3 (IR)](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_IR-alert.md)
-- [Proximity - EVShield EV3 (Ultrasonic)](https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_US-alert.md)
-
-### Intel Edison + Grove IoT Kit
-- [Intel Edison + Grove - Accelerometer (ADXL345)](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-accelerometer-adxl345-edison.md)
-- [Intel Edison + Grove - Accelerometer (MMA7660)](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-accelerometer-mma7660-edison.md)
-- [Intel Edison + Grove - Air quality sensor](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-gas-tp401-edison.md)
-- [Intel Edison + Grove - Barometer (BMP180)](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-barometer-edison.md)
-- [Intel Edison + Grove - Button](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-button-edison.md)
-- [Intel Edison + Grove - Compass (HMC588L)](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-compass-edison.md)
-- [Intel Edison + Grove - Flame Sensor](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-flame-sensor-edison.md)
-- [Intel Edison + Grove - Gas (MQ2)](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-gas-mq2-edison.md)
-- [Intel Edison + Grove - Humidity & Temperature (TH02)](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-humidity-temperature-edison.md)
-- [Intel Edison + Grove - I2C Motor Driver](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-i2c-motor-driver-edison.md)
-- [Intel Edison + Grove - Joystick](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-joystick-edison.md)
-- [Intel Edison + Grove - LED](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-led-edison.md)
-- [Intel Edison + Grove - Light Sensor (TSL2561)](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-light-sensor-edison.md)
-- [Intel Edison + Grove - Moisture Sensor](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-moisture-edison.md)
-- [Intel Edison + Grove - Q Touch](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-q-touch.md)
-- [Intel Edison + Grove - RGB LCD](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb-edison.md)
-- [Intel Edison + Grove - RGB LCD Color Previewer](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb-bgcolor-previewer-edison.md)
-- [Intel Edison + Grove - RGB LCD temperature display](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb-temperature-display-edison.md)
-- [Intel Edison + Grove - Relay](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-relay-edison.md)
-- [Intel Edison + Grove - Rotary Potentiometer](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-rotary-potentiometer-edison.md)
-- [Intel Edison + Grove - Servo](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-servo-edison.md)
-- [Intel Edison + Grove - Touch](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-touch-edison.md)
-
-### Grove IoT Kit (Seeed Studio)
-- [Grove - Button](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-button.md)
-- [Grove - Joystick](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-joystick.md)
-- [Grove - LED](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-led.md)
-- [Grove - Motor (I2C Driver)](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-i2c-motor-driver.md)
-- [Grove - RGB LCD](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb.md)
-- [Grove - RGB LCD temperature display](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb-temperature-display.md)
-- [Grove - Rotary Potentiometer](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-rotary-potentiometer.md)
-- [Grove - Servo](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-servo.md)
-- [Grove - Touch](https://github.com/rwaldron/johnny-five/blob/main/docs/grove-touch.md)
-
-### Micro Magician V2
-- [Micro Magician V2 - Accelerometer](https://github.com/rwaldron/johnny-five/blob/main/docs/micromagician-accelerometer.md)
-- [Micro Magician V2 - Motor](https://github.com/rwaldron/johnny-five/blob/main/docs/micromagician-motor.md)
-- [Micro Magician V2 - Servo](https://github.com/rwaldron/johnny-five/blob/main/docs/micromagician-servo.md)
-
-### TinkerKit
-- [TinkerKit - Accelerometer](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-accelerometer.md)
-- [TinkerKit - Blink](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-blink.md)
-- [TinkerKit - Button](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-button.md)
-- [TinkerKit - Combo](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-combo.md)
-- [TinkerKit - Continuous servo](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-continuous-servo.md)
-- [TinkerKit - Gyro](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-gyroscope.md)
-- [TinkerKit - Joystick](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-joystick.md)
-- [TinkerKit - Linear potentiometer](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-linear-pot.md)
-- [TinkerKit - Rotary potentiometer](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-rotary.md)
-- [TinkerKit - Temperature](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-thermistor.md)
-- [TinkerKit - Tilt](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-tilt.md)
-- [TinkerKit - Touch](https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-touch.md)
-
-### Wii
-- [Wii Classic Controller](https://github.com/rwaldron/johnny-five/blob/main/docs/classic-controller.md)
-- [Wii Nunchuck](https://github.com/rwaldron/johnny-five/blob/main/docs/nunchuk.md)
-
-### Complete Bots / Projects
-- [Bug](https://github.com/rwaldron/johnny-five/blob/main/docs/bug.md)
-- [Kinect Robotic Arm Controller](https://github.com/rwaldron/johnny-five/blob/main/docs/kinect-arm-controller.md)
-- [Laser Trip Wire](https://github.com/rwaldron/johnny-five/blob/main/docs/laser-trip-wire.md)
-- [Line Follower](https://github.com/rwaldron/johnny-five/blob/main/docs/line-follower.md)
-- [Lynxmotion Biped BRAT](https://github.com/rwaldron/johnny-five/blob/main/docs/brat.md)
-- [Motobot](https://github.com/rwaldron/johnny-five/blob/main/docs/motobot.md)
-- [Navigator](https://github.com/rwaldron/johnny-five/blob/main/docs/navigator.md)
-- [Nodebot](https://github.com/rwaldron/johnny-five/blob/main/docs/nodebot.md)
-- [Phoenix Hexapod](https://github.com/rwaldron/johnny-five/blob/main/docs/phoenix.md)
-- [Radar](https://github.com/rwaldron/johnny-five/blob/main/docs/radar.md)
-- [Robotic Claw](https://github.com/rwaldron/johnny-five/blob/main/docs/claw.md)
-- [Whisker](https://github.com/rwaldron/johnny-five/blob/main/docs/whisker.md)
-
-### Component Plugin Template
-- [Example plugin](https://github.com/rwaldron/johnny-five/blob/main/docs/plugin.md)
-
-### IO Plugins
-- [Led Blink on Electric Imp](https://github.com/rwaldron/johnny-five/blob/main/docs/imp-io.md)
-- [Led Blink on Intel Edison Arduino Board](https://github.com/rwaldron/johnny-five/blob/main/docs/edison-io-arduino.md)
-- [Led Blink on Intel Edison Mini Board](https://github.com/rwaldron/johnny-five/blob/main/docs/edison-io-miniboard.md)
-- [Led Blink on Intel Galileo Gen 2](https://github.com/rwaldron/johnny-five/blob/main/docs/galileo-io.md)
-- [Led Blink on Raspberry Pi](https://github.com/rwaldron/johnny-five/blob/main/docs/raspi-io.md)
-- [Led Blink on Spark Core](https://github.com/rwaldron/johnny-five/blob/main/docs/spark-io.md)
-- [Led Blink on pcDuino3](https://github.com/rwaldron/johnny-five/blob/main/docs/pcduino-io.md)
-
-<!--extract-end:examples-->
-
-## Many fragments. Some large, some small.
-
-#### [Wireless Nodebot](http://jsfiddle.net/rwaldron/88M6b/show/light)
-#### [Kinect Controlled Robot Arm](http://jsfiddle.net/rwaldron/XMsGQ/show/light/)
-#### [Biped Nodebot](http://jsfiddle.net/rwaldron/WZkn5/show/light/)
-#### [LCD Running Man](http://jsfiddle.net/rwaldron/xKwaU/show/light/)
-#### [Slider Controlled Panning Servo](http://jsfiddle.net/rwaldron/kZakv/show/light/)
-#### [Joystick Controlled Laser (pan/tilt) 1](http://jsfiddle.net/rwaldron/HPqms/show/light/)
-#### [Joystick Controlled Laser (pan/tilt) 2](http://jsfiddle.net/rwaldron/YHb7A/show/light/)
-#### [Joystick Controlled Claw](http://jsfiddle.net/rwaldron/6ZXFe/show/light/)
-#### [Robot Claw](http://jsfiddle.net/rwaldron/CFSZJ/show/light/)
-#### [Joystick, Motor & Led](http://jsfiddle.net/rwaldron/gADSz/show/light/)
-#### [Build you own drone](http://github.com/darioodiaz/node-open-pilot/)
-
-
-
-## Make: JavaScript Robotics
-
-[![](http://ecx.images-amazon.com/images/I/91ae8ZZDQ2L.jpg)](http://shop.oreilly.com/product/0636920031390.do)
-
-
-
-
-## Contributing
-All contributions must adhere to the [Idiomatic.js Style Guide](https://github.com/rwaldron/idiomatic.js),
-by maintaining the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
-
-
-## License
-Copyright (c) 2012, 2013, 2014 Rick Waldron <waldron.rick@gmail.com>
-Licensed under the MIT license.
-Copyright (c) 2014, 2015 The Johnny-Five Contributors
-Licensed under the MIT license.
+});" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><animated-image data-catalyst=""><a target="_blank" rel="noopener noreferrer" href="https://github.com/rwaldron/johnny-five/raw/main/assets/led-blink.gif" data-target="animated-image.originalLink"><img src="https://github.com/rwaldron/johnny-five/raw/main/assets/led-blink.gif" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+      <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
+        <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://github.com/rwaldron/johnny-five/raw/main/assets/led-blink.gif" target="_blank">
+          
+        <span data-target="animated-image.imageContainer">
+            <img data-target="animated-image.replacedImage" alt="LED 闪烁.gif" class="AnimatedImagePlayer-animatedImage" src="https://github.com/rwaldron/johnny-five/raw/main/assets/led-blink.gif" style="display: block; opacity: 1;">
+          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="533" height="483"></canvas></span></a>
+        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="播放 led-blink.gif" hidden=""></button>
+        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
+          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="播放 led-blink.gif">
+            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
+            </path></svg>
+            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
+              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
+            </svg>
+          </button>
+          <a data-target="animated-image.openButton" aria-label="在新窗口中打开 led-blink.gif" class="AnimatedImagePlayer-button" href="https://github.com/rwaldron/johnny-five/raw/main/assets/led-blink.gif" target="_blank">
+            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
+            </svg>
+          </a>
+        </span>
+      </span></animated-image></p>
+<blockquote>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：如果您尝试在节点 REPL 中运行 johnny- Five，节点将会崩溃，但板实例将创建自己的上下文 REPL。</font><font style="vertical-align: inherit;">将您的脚本放入文件中。</font></font></p>
+</blockquote>
+<h2 tabindex="-1" dir="auto"><a id="user-content-supported-hardware" class="anchor" aria-hidden="true" tabindex="-1" href="#supported-hardware"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持的硬件</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Johnny-Five 已在各种 Arduino 兼容</font></font><a href="https://github.com/rwaldron/johnny-five/wiki/Board"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">板上</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">进行了测试。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于非基于 Arduino 的项目，可以使用</font><font style="vertical-align: inherit;">许多特定于平台的</font></font><a href="https://github.com/rwaldron/johnny-five/wiki/IO-Plugins"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IO 插件。</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IO 插件允许 Johnny-Five 代码以平台使用的任何语言与任何非基于 Arduino 的硬件进行通信！</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-documentation" class="anchor" aria-hidden="true" tabindex="-1" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="http://johnny-five.io/api/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Johnny-Five API 的文档可以在这里</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">找到</font><font style="vertical-align: inherit;">，</font></font><a href="http://johnny-five.io/examples/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例程序可以在这里</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">找到。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-guidance" class="anchor" aria-hidden="true" tabindex="-1" href="#guidance"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指导</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">需要帮忙？</font></font><a href="http://forums.nodebots.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在NodeBots 社区论坛</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上提问</font><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">如果您有一个简单的问题或对正在进行的设计讨论感兴趣，请加入我们的</font></font><a href="https://gitter.im/rwaldron/johnny-five" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Johnny-Five Gitter 聊天</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关分步示例（包括电子入门知识），请查看</font><a href="https://twitter.com/AnnaGerber" rel="nofollow"><font style="vertical-align: inherit;">@AnnaGerber</font></a><font style="vertical-align: inherit;">编写的</font></font><a href="http://node-ardx.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NodeJS Arduino 实验者指南</font></font></a><font style="vertical-align: inherit;"></font><a href="https://twitter.com/AnnaGerber" rel="nofollow"><font style="vertical-align: inherit;"></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://github.com/rwaldron/johnny-five/wiki/Getting-Started#prerequisites"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以下是 Linux、OSX 或 Windows 的先决条件</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">列表</font><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想远程控制您的机器人，</font><font style="vertical-align: inherit;">请查看</font></font><a href="https://github.com/rwaldron/johnny-five/wiki/JY-MCU-Bluetooth-Serial-Port-Module-Notes"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">蓝牙指南。</font></font></a><font style="vertical-align: inherit;"></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-setup-and-assemble-arduino" class="anchor" aria-hidden="true" tabindex="-1" href="#setup-and-assemble-arduino"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设置和组装 Arduino</font></font></h2>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">推荐的入门套件：</font></font><a href="https://www.sparkfun.com/products/12001" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sparkfun Inventor's Kit</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载</font></font><a href="http://arduino.cc/en/main/software" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arduino IDE</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过 USB 插入 Arduino 或 Arduino 兼容微控制器</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">打开 Arduino IDE，选择：File &gt; Examples &gt; Firmata &gt; StandardFirmataPlus
+</font></font><ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">StandardFirmataPlus 可用于 Firmata v2.5.0 或更高版本</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">单击“上传”按钮。</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果上传成功，则电路板现已准备就绪，您可以关闭 Arduino IDE。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于非 Arduino 项目，每个 IO 插件的存储库将提供其自己的特定于平台的设置说明。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-hey-you-heres-johnny" class="anchor" aria-hidden="true" tabindex="-1" href="#hey-you-heres-johnny"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">嘿，你，这是约翰尼！</font></font></h2>
+<h4 tabindex="-1" dir="auto"><a id="user-content-source-code" class="anchor" aria-hidden="true" tabindex="-1" href="#source-code"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">源代码：</font></font></h4>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>git clone git://github.com/rwaldron/johnny-five.git <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">cd</span> johnny-five
+
+npm install</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="git clone git://github.com/rwaldron/johnny-five.git &amp;&amp; cd johnny-five
+
+npm install" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h4 tabindex="-1" dir="auto"><a id="user-content-npm-package" class="anchor" aria-hidden="true" tabindex="-1" href="#npm-package"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">npm 包：</font></font></h4>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装模块：</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>npm install johnny-five</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="npm install johnny-five" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<h2 tabindex="-1" dir="auto"><a id="user-content-example-programs" class="anchor" aria-hidden="true" tabindex="-1" href="#example-programs"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例程序</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了让您快速启动并运行，我们提供了使用每个 Johnny-Five 组件的各种示例。</font><font style="vertical-align: inherit;">我们特别兴奋的一件事是您可以在整个网站中找到</font><font style="vertical-align: inherit;">大量的</font></font><a href="http://fritzing.org/home/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fritzing图表。</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">约翰尼五号项目的很大一部分是处理实际的硬件，我们将这些作为文档的一部分，因为我们意识到，如果没有关于如何连接伺服器的说明，那么关于如何编写代码来控制伺服器的说明是不够的。伺服！</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要以交互方式浏览示例，请访问</font><font style="vertical-align: inherit;">官方网站上的</font></font><a href="http://johnny-five.io/examples/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Johnny-Five 示例页面。</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想直接链接到此存储库中的示例，可以使用以下链接之一。</font></font></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目前有 362 个带有代码和图表的示例程序！</font></font></strong></p>
+
+<h3 tabindex="-1" dir="auto"><a id="user-content-board" class="anchor" aria-hidden="true" tabindex="-1" href="#board"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">木板</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/board.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">主板 - 基本初始化</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/board-cleanup.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">董事会 - “退出”事件中的清理</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/board-multi.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">董事会 - 多合一计划</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/board-sampling-interval.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">板 - 指定采样间隔</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/board-with-port.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">板 - 指定端口</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/custom-properties.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自定义数据属性</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/pin.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">别针</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/repl.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">REPL</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-led" class="anchor" aria-hidden="true" tabindex="-1" href="#led"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">引领</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">引领</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-blink.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 闪烁</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-demo-sequence.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 演示序列</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-fade.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 淡入淡出</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-fade-callback.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 淡入淡出回调</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-fade-animation.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 随动画淡入淡出</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-PCA9685.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED-PCA9685</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-pulse.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 脉冲</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-pulse-animation.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 脉冲动画</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-slider.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 滑块</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-tessel-servo-module.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - Tessel 伺服模块</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-array.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - LED 阵列</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-array-controller.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 控制 LED 阵列</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-led-rgb" class="anchor" aria-hidden="true" tabindex="-1" href="#led-rgb"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED：RGB</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-rgb-anode.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - RGB（共阳极）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-rgb-anode-PCA9685.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - RGB（共阳极）PCA9685</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-rgb-intensity.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - RGB 强度</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-rainbow.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 彩虹</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-rgb-BLINKM.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - Rainbow BlinkM</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-led-digits--matrix" class="anchor" aria-hidden="true" tabindex="-1" href="#led-digits--matrix"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED：数字和矩阵</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-digits-clock.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 数字时钟</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-digits-clock-dual.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 数字时钟，双显示屏</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-digits-clock-HT16K33.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 数字时钟，HT16K33</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-chars-demo.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 绘制矩阵字符演示</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-enumeratechars.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 枚举矩阵字符和符号</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-matrix.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 矩阵</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-matrix-tutorial.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 矩阵演示</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-matrix-HT16K33.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 矩阵 HT16K33</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/led-matrix-HT16K33-16x8.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LED - 矩阵 HT16K33 16x8</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-servo" class="anchor" aria-hidden="true" tabindex="-1" href="#servo"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-continuous.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服-连续</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-drive.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服驱动</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-multi-turn.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服 - 多圈</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-PCA9685.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服-PCA9685</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-prompt.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服-提示</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-slider.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服 - 滑块控制</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-tessel-servo-module.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服-Tessel伺服模块</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-array.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">舵机 - 舵机阵列</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-gps" class="anchor" aria-hidden="true" tabindex="-1" href="#gps"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">全球定位系统</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/gps-adafruit.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GPS - Adafruit 终极 GPS 突破</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/gps.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GPS - 默认 GPS</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/gps-hardware-serial.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GPS - 硬件串行</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/gps-GP-20U7.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GPS-Sparkfun GP-20U7</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-servo-animation" class="anchor" aria-hidden="true" tabindex="-1" href="#servo-animation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服动画</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-animation.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服 - 动画</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/servo-animation-leg.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">伺服 - 腿部动画</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-color" class="anchor" aria-hidden="true" tabindex="-1" href="#color"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">颜色</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/color-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">颜色 - EVShield EV3（代码）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/color-raw-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">颜色 - EVShield EV3（原始）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/color-EVS_NXT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">颜色 - EVShield NXT（代码）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/color-ISL29125.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">颜色 - ISL29125</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-motor" class="anchor" aria-hidden="true" tabindex="-1" href="#motor"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发动机</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发动机</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-3-pin.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - 3 针</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-drv8871.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - Adafruit DRV8871 直流电机驱动器分线</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-brake.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机-制动器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-current.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - 电流</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-directional.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - 定向</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - EVShield EV3</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-EVS_NXT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - EVShield NXT</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-enable.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - 启用引脚</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-GROVE_I2C.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - GROVE_I2C_MOTOR_DRIVER</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-hbridge.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - H 桥</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-LUDUS.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - LUDUS</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-PCA9685.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - PCA9685</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-vnh5019.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - Pololu VNH5019 双电机驱动器分线器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-sparkfun-edison-hbridge.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - Sparkfun 双 H 桥 Edison Block</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-TB6612FNG.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - Sparkfun TB6612FNG</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-l298-breakout.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - l298 分线</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-hbridge-dual.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - 双 H 桥</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-stepper-motor" class="anchor" aria-hidden="true" tabindex="-1" href="#stepper-motor"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">步进电机</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/stepper-driver.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">步进器 - 驱动器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/stepper-four_wire.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">步进器 - 四线</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/stepper-sweep.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">步进-扫频</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-esc--brushless-motor" class="anchor" aria-hidden="true" tabindex="-1" href="#esc--brushless-motor"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电调和无刷电机</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/esc-bidirectional.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ESC - 双向</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/esc-keypress.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ESC - 按键控制的 ESC</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/esc-PCA9685.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电调-PCA9685</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-button--switch" class="anchor" aria-hidden="true" tabindex="-1" href="#button--switch"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮/开关</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/button.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/button-bumper.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮 - 保险杠</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/button-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮 - EVShield EV3</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/button-EVS_NXT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮 - EVShield NXT</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/button-options.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮 - 选项</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/button-pullup.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮 - 上拉</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/button-collection-AT42QT1070.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮 - 带 AT42QT1070 的系列</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/switch.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">转变</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/switch-magnetic-door.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开关 - 磁力门</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/switch-tilt-SW_200D.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开关 - 倾斜 SW-200D</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/toggle-switch.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">拨动开关</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-keypad" class="anchor" aria-hidden="true" tabindex="-1" href="#keypad"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">键盘</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-3X4_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">键盘 - 3x4 I2C 纳米背包</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-4X4_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">键盘 - 4x4 I2C 纳米背包</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-analog-vkey.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">键盘-VKEY</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-analog-ad.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">键盘 - Waveshare AD</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-QTOUCH.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">触摸板 - Grove QTouch</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">触摸板 - MPR121</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121-sensitivity.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">触摸板 - MPR121，灵敏度</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121QR2_SHIELD.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">触摸板 - MPR121QR2_SHIELD</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121_KEYPAD.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">触摸板 - MPR121_KEYPAD</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/keypad-MPR121_SHIELD.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">触摸板 - MPR121_SHIELD</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-relay" class="anchor" aria-hidden="true" tabindex="-1" href="#relay"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中继</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/relay.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中继</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/relay-collection.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接力 - 集合</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/relay-on-analog-pin.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">模拟引脚上的继电器</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-shift-register" class="anchor" aria-hidden="true" tabindex="-1" href="#shift-register"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">移位寄存器</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">移位寄存器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register-seven-segment-anode.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">移位寄存器 - 共阳极七段控制器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register-daisy-chain-anode.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">移位寄存器 - 共阳极七段，链式</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register-seven-segment.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">移位寄存器 - 七段控制器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/shift-register-daisy-chain.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">移位寄存器 - 七段，链式</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-infrared-reflectance" class="anchor" aria-hidden="true" tabindex="-1" href="#infrared-reflectance"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">红外反射率</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/ir-motion.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">红外运动</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/ir-proximity.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">红外接近度</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/ir-reflect.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">红外反射率</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/ir-reflect-array.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">红外反射阵列</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-proximity" class="anchor" aria-hidden="true" tabindex="-1" href="#proximity"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_IR.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - EVShield EV3（红外）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_IR-alert.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - EVShield EV3（红外）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_US.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - EVShield EV3（超声波）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_US-alert.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - EVShield EV3（超声波）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-GP2Y0A710K0F.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - GP2Y0A710K0F</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-hcsr04.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - HC-SR04</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-hcsr04-analog.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - HC-SR04（模拟）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-hcsr04-i2c.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Proximity - HC-SR04 I2C 背包</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-lidarlite.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">近距离 - LIDAR-Lite</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-mb1000.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - MB1000</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-mb1003.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - MB1003</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-mb1010.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - MB1010</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-mb1230.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - MB1230</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-srf10.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - SRF10</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-motion" class="anchor" aria-hidden="true" tabindex="-1" href="#motion"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运动</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motion.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运动</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motion-GP2Y0A60SZLF.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运动 - GP2Y0A60SZLF</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motion-gp2y0d805z0f.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运动 - GP2Y0D805Z0F</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motion-gp2y0d810z0f.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运动 - GP2Y0D810Z0F</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motion-gp2y0d815z0f.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运动 - GP2Y0D810Z0F</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-joystick" class="anchor" aria-hidden="true" tabindex="-1" href="#joystick"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操纵杆</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/joystick.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操纵杆</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/joystick-esplora.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操纵杆 - Esplora</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/joystick-pantilt.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操纵杆 - 平移 + 倾斜控制</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/joystick-shield.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操纵杆 - Sparkfun 盾</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-lcd" class="anchor" aria-hidden="true" tabindex="-1" href="#lcd"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">液晶显示屏</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-rgb-bgcolor-previewer.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Grove - RGB LCD 颜色预览器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">液晶显示屏</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-enumeratechars.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LCD - 枚举字符</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-i2c.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">液晶显示屏-I2C</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-i2c-PCF8574.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">液晶屏 - I2C PCF8574</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-i2c-runner.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LCD - I2C 运行器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-runner.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LCD - 跑步者 16x2</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-runner-20x4.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LCD - 跑步者 20x4</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-16x2-tessel.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">液晶显示屏 - Tessel 2 16x2</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-rgb-bgcolor-previewer-tessel.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tessel 2 + Grove - RGB LCD 颜色预览器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/lcd-rgb-tessel-grove-JHD1313M1.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tessel 2 + Grove - RGB LCD 显示屏</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-compassmagnetometer" class="anchor" aria-hidden="true" tabindex="-1" href="#compassmagnetometer"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南针/磁力计</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/magnetometer-north.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南针 - 寻找北方</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/compass-hmc5883l.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南针 - HMC5883L</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/compass-hmc6352.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南针 - HMC6352</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/magnetometer-log.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南针 - 记录仪</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/compass-MAG3110.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南针 - MAG3110</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/compass-MAG3110-tessel.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南针 - Tessel 2 上的 MAG3110</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/magnetometer.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">指南针/磁力计</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-piezo" class="anchor" aria-hidden="true" tabindex="-1" href="#piezo"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">压电</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/piezo.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">压电</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-imumulti" class="anchor" aria-hidden="true" tabindex="-1" href="#imumulti"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IMU/多重</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/imu-bno055.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IMU-BNO055</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/imu-bno055-orientation.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IMU - BNO055（方向）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/imu-lsm303c.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IMU-LSM303C</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/imu-mpu6050.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IMU-MPU6050</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-BME280.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - BME280</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-bmp085.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 BMP085</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-bmp180.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 BMP180</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-DHT11_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - DHT11_I2C_NANO_BACKPACK</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-DHT21_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - DHT21_I2C_NANO_BACKPACK</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-DHT22_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - DHT22_I2C_NANO_BACKPACK</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-HIH6130.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - HIH6130</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-htu21d.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多功能 HTU21D</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-mpl115a2.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - MPL115A2</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-mpl3115a2.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - MPL3115A2</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-MS5611.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - MS5611</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-sht31d.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多功能SHT31D</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-SI7020.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - SI7020</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-SI7021.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多 - SI7021</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/multi-TH02.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多-TH02</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-sensors" class="anchor" aria-hidden="true" tabindex="-1" href="#sensors"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加速度计</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-adxl335.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加速度计 - ADXL335</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-adxl345.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加速度计 - ADXL345</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-LIS3DH.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加速度计 - LIS3DH</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-mma7361.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加速度计 - MMA7361</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-MMA8452.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加速度计 - MMA8452</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-mpu6050.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加速度计 - MPU6050</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/accelerometer-pan-tilt.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加速度计 - 平移 + 倾斜</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/altimeter-BMP085.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高度计 - BMP085</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/altimeter-BMP180.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高度计 - BMP180</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/altimeter-mpl3115a2.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高度计 - MPL3115A2</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/altimeter-MS5611.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">高度计 - MS5611</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-BMP085.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">气压计 - BMP085</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-BMP180.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">晴雨表 - BMP180</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-mpl115a2.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">气压计 - MPL115A2</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-mpl3115a2.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">气压计 - MPL3115A2</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/barometer-MS5611.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">气压计 - MS5611</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/gyro.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">陀螺仪</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/gyro-lpr5150l.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">陀螺仪 - 模拟 LPR5150AL</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/gyro-mpu6050.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">陀螺仪 - I2C MPU6050</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-DHT11_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">湿度计 - DHT11_I2C_NANO_BACKPACK</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-DHT21_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">湿度计 - DHT21_I2C_NANO_BACKPACK</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-DHT22_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">湿度计 - DHT22_I2C_NANO_BACKPACK</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-HIH6130.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">湿度计 - HIH6130</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-htu21d.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">湿度计 - HTU21D</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-sht31d.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">湿度计-SHT31D</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-SI7021.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">湿度计 - SI7021</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/hygrometer-TH02.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">湿度计-TH02</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/sensor.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/sensor-digital-microwave.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器 - 数字微波</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/flex.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器 - 柔性传感器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/sensor-fsr.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器-力敏电阻</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/microphone.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器 - 麦克风</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/photoresistor.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器 - 光敏电阻</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/potentiometer.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器-电位器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/sensor-slider.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器 - 滑动电位器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-bmp085.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - BMP085</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-BMP180.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - BMP180</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-DHT11_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - DHT11_I2C_NANO_BACKPACK</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-DHT21_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - DHT21_I2C_NANO_BACKPACK</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-DHT22_I2C_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - DHT22_I2C_NANO_BACKPACK</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-ds18b20.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - DS18B20</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-dual-ds18b20.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - 双 DS18B20</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-HIH6130.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - HIH6130</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-htu21d.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - HTU21D</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-lm335.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - LM335</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-lm35.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - LM35</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-max31850k.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - MAX31850</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-MCP9808.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - MCP9808</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-mpl115a2.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - MPL115A2</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-mpl3115a2.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - MPL3115A2</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-mpu6050.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - MPU6050</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-MS5611.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - MS5611</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-sht31d.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计-SHT31D</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-SI7020.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - SI7020</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-SI7021.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - SI7021</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-TH02.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计-TH02</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-tmp102.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - TMP102</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/temperature-tmp36.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">温度计 - TMP36</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-expander" class="anchor" aria-hidden="true" tabindex="-1" href="#expander"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩张器</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-74HC595.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - 74HC595</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-CD74HC4067_NANO_BACKPACK.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - CD74HC4067，16 通道模拟输入接线</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-LIS3DH.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - LIS3DH</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-MCP23008.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - MCP23008</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-MCP23017.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - MCP23017</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-MUXSHIELD2-analog-read.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - MUXSHIELD2，模拟传感器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-MUXSHIELD2-mixed.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - MUXSHIELD2，数字输入和输出</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-PCA9685.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - PCA9685</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-PCF8574.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - PCF8574</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-PCF8575.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - PCF8575</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/expander-PCF8591.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">扩展器 - PCF8591</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-photon-weather-shield" class="anchor" aria-hidden="true" tabindex="-1" href="#photon-weather-shield"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">光子天气防护罩</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/sensor-photon-weather-shield-moisture.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">光子天气防护罩：水分</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-lego-evshield" class="anchor" aria-hidden="true" tabindex="-1" href="#lego-evshield"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">乐高EVShield</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/button-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮 - EVShield EV3</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/button-EVS_NXT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按钮 - EVShield NXT</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/color-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">颜色 - EVShield EV3（代码）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/color-raw-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">颜色 - EVShield EV3（原始）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/color-EVS_NXT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">颜色 - EVShield NXT（代码）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/light-ambient-BH1750.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">轻型 - BH1750</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/light-ambient-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">光 - EVShield EV3（环境光）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/light-reflected-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">光 - EVShield EV3（反射）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/light-ambient-EVS_NXT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">光 - EVShield NXT（环境光）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/light-reflected-EVS_NXT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">光 - EVShield NXT（反射）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/light-ambient-TSL2561.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">光 - TSL2561</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-EVS_EV3.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - EVShield EV3</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motor-EVS_NXT.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电机 - EVShield NXT</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_IR-alert.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - EVShield EV3（红外）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/proximity-EVS_EV3_US-alert.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">接近 - EVShield EV3（超声波）</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-intel-edison--grove-iot-kit" class="anchor" aria-hidden="true" tabindex="-1" href="#intel-edison--grove-iot-kit"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove 物联网套件</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-accelerometer-adxl345-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 加速计 (ADXL345)</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-accelerometer-mma7660-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 加速计 (MMA7660)</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-gas-tp401-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intel Edison + Grove - 空气质量传感器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-barometer-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 晴雨表 (BMP180)</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-button-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 按钮</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-compass-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 指南针 (HMC588L)</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-flame-sensor-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intel Edison + Grove - 火焰传感器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-gas-mq2-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - Gas (MQ2)</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-humidity-temperature-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 湿度和温度 (TH02)</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-i2c-motor-driver-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intel Edison + Grove - I2C 电机驱动器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-joystick-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 操纵杆</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-led-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - LED</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-light-sensor-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 光传感器 (TSL2561)</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-moisture-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intel Edison + Grove - 湿度传感器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-q-touch.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - Q Touch</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - RGB LCD</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb-bgcolor-previewer-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intel Edison + Grove - RGB LCD 颜色预览器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb-temperature-display-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intel Edison + Grove - RGB LCD 温度显示</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-relay-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 继电器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-rotary-potentiometer-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intel Edison + Grove - 旋转电位器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-servo-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 伺服</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-touch-edison.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison + Grove - 触摸</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-grove-iot-kit-seeed-studio" class="anchor" aria-hidden="true" tabindex="-1" href="#grove-iot-kit-seeed-studio"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Grove IoT 套件 (Seeed Studio)</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-button.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">格罗夫 - 按钮</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-joystick.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">格罗夫 - 操纵杆</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-led.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">格罗夫 - LED</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-i2c-motor-driver.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Grove - 电机（I2C 驱动器）</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Grove - RGB LCD</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-lcd-rgb-temperature-display.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Grove - RGB LCD 温度显示器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-rotary-potentiometer.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Grove - 旋转电位器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-servo.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">格罗夫 - 伺服</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/grove-touch.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">格罗夫 - 触摸</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-micro-magician-v2" class="anchor" aria-hidden="true" tabindex="-1" href="#micro-magician-v2"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微魔术师V2</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/micromagician-accelerometer.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微型魔术师V2-加速度计</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/micromagician-motor.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微魔术师V2-电机</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/micromagician-servo.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微魔术师V2-舵机</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-tinkerkit" class="anchor" aria-hidden="true" tabindex="-1" href="#tinkerkit"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">修补匠套件</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-accelerometer.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 加速度计</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-blink.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 眨眼</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-button.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 按钮</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-combo.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 组合</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-continuous-servo.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 连续伺服</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-gyroscope.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 陀螺仪</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-joystick.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 操纵杆</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-linear-pot.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 线性电位器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-rotary.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 旋转电位器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-thermistor.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 温度</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-tilt.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 倾斜</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/tinkerkit-touch.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TinkerKit - 触摸</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-wii" class="anchor" aria-hidden="true" tabindex="-1" href="#wii"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">任天堂</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/classic-controller.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wii 经典控制器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/nunchuk.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wii双截棍</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-complete-bots--projects" class="anchor" aria-hidden="true" tabindex="-1" href="#complete-bots--projects"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">完整的机器人/项目</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/bug.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">漏洞</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/kinect-arm-controller.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kinect 机械臂控制器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/laser-trip-wire.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">激光跳闸线</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/line-follower.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">巡线器</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/brat.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lynxmotion 两足小子</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/motobot.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">摩托机器人</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/navigator.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">航海家</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/nodebot.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">节点机器人</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/phoenix.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">凤凰六足动物</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/radar.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">雷达</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/claw.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">机械爪</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/whisker.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">晶须</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-component-plugin-template" class="anchor" aria-hidden="true" tabindex="-1" href="#component-plugin-template"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">组件插件模板</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/plugin.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例插件</font></font></a></li>
+</ul>
+<h3 tabindex="-1" dir="auto"><a id="user-content-io-plugins" class="anchor" aria-hidden="true" tabindex="-1" href="#io-plugins"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IO插件</font></font></h3>
+<ul dir="auto">
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/imp-io.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Electric Imp 上的 LED 闪烁</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/edison-io-arduino.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intel Edison Arduino 板上的 LED 闪烁</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/edison-io-miniboard.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">英特尔 Edison 迷你主板上的 LED 闪烁</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/galileo-io.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Intel Galileo Gen 2 上的 LED 闪烁</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/raspi-io.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Raspberry Pi 上的 LED 闪烁</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/spark-io.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spark Core 上的 LED 闪烁</font></font></a></li>
+<li><a href="https://github.com/rwaldron/johnny-five/blob/main/docs/pcduino-io.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pcDuino3 上的 LED 闪烁</font></font></a></li>
+</ul>
+
+<h2 tabindex="-1" dir="auto"><a id="user-content-many-fragments-some-large-some-small" class="anchor" aria-hidden="true" tabindex="-1" href="#many-fragments-some-large-some-small"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许多碎片。</font><font style="vertical-align: inherit;">有的大，有的小。</font></font></h2>
+<h4 tabindex="-1" dir="auto"><a id="user-content-wireless-nodebot" class="anchor" aria-hidden="true" tabindex="-1" href="#wireless-nodebot"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/88M6b/show/light" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">无线节点机器人</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-kinect-controlled-robot-arm" class="anchor" aria-hidden="true" tabindex="-1" href="#kinect-controlled-robot-arm"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/XMsGQ/show/light/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kinect 控制机械臂</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-biped-nodebot" class="anchor" aria-hidden="true" tabindex="-1" href="#biped-nodebot"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/WZkn5/show/light/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">双足节点机器人</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-lcd-running-man" class="anchor" aria-hidden="true" tabindex="-1" href="#lcd-running-man"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/xKwaU/show/light/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">液晶跑人</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-slider-controlled-panning-servo" class="anchor" aria-hidden="true" tabindex="-1" href="#slider-controlled-panning-servo"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/kZakv/show/light/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">滑块控制平移伺服</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-joystick-controlled-laser-pantilt-1" class="anchor" aria-hidden="true" tabindex="-1" href="#joystick-controlled-laser-pantilt-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/HPqms/show/light/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操纵杆控制激光（平移/倾斜）1</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-joystick-controlled-laser-pantilt-2" class="anchor" aria-hidden="true" tabindex="-1" href="#joystick-controlled-laser-pantilt-2"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/YHb7A/show/light/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操纵杆控制激光（平移/倾斜）2</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-joystick-controlled-claw" class="anchor" aria-hidden="true" tabindex="-1" href="#joystick-controlled-claw"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/6ZXFe/show/light/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操纵杆控制爪</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-robot-claw" class="anchor" aria-hidden="true" tabindex="-1" href="#robot-claw"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/CFSZJ/show/light/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">机器人爪</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-joystick-motor--led" class="anchor" aria-hidden="true" tabindex="-1" href="#joystick-motor--led"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://jsfiddle.net/rwaldron/gADSz/show/light/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">操纵杆、电机和 LED</font></font></a></h4>
+<h4 tabindex="-1" dir="auto"><a id="user-content-build-you-own-drone" class="anchor" aria-hidden="true" tabindex="-1" href="#build-you-own-drone"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><a href="http://github.com/darioodiaz/node-open-pilot/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">打造你自己的无人机</font></font></a></h4>
+<h2 tabindex="-1" dir="auto"><a id="user-content-make-javascript-robotics" class="anchor" aria-hidden="true" tabindex="-1" href="#make-javascript-robotics"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">制造商：JavaScript 机器人公司</font></font></h2>
+<p dir="auto"><a href="http://shop.oreilly.com/product/0636920031390.do" rel="nofollow"><img src="https://camo.githubusercontent.com/1aad5a7707a5307322149ef4bf74948d6ac49784cb51c56c06df3f7f4faa5f8a/687474703a2f2f6563782e696d616765732d616d617a6f6e2e636f6d2f696d616765732f492f39316165385a5a4451324c2e6a7067" alt="" data-canonical-src="http://ecx.images-amazon.com/images/I/91ae8ZZDQ2L.jpg" style="max-width: 100%;"></a></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contributing" class="anchor" aria-hidden="true" tabindex="-1" href="#contributing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所有贡献都必须遵守</font></font><a href="https://github.com/rwaldron/idiomatic.js"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Idiomatic.js 风格指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，保持现有的编码风格。</font><font style="vertical-align: inherit;">为任何新的或更改的功能添加单元测试。</font></font><a href="https://github.com/gruntjs/grunt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用grunt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">检查并测试您的代码</font><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-license" class="anchor" aria-hidden="true" tabindex="-1" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版权所有 (c) 2012、2013、2014 Rick Waldron </font></font><a href="mailto:waldron.rick@gmail.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">waldron.rick@gmail.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+根据 MIT 许可证获得许可。</font><font style="vertical-align: inherit;">版权所有 (c) 2014、2015 The Johnny-Five Contributors 根据 MIT 许可证获得许可。</font></font></p>
+</article></div>
